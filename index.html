@@ -3,39 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>便利ツール集</title>
+  <meta name="description" content="年齢計算・BMI計算・住宅ローン計算・割り勘・文字数カウント・消費税計算など、日常生活で役立つ無料計算ツールを集めたサイトです。スマホでも使いやすいシンプルな設計です。">
+  <title>無料計算ツール集 | 日常で使える便利ツールまとめ</title>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1364194685674740"
      crossorigin="anonymous"></script>
   <style>
-    body {
-      font-family: 'Hiragino Sans', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background: linear-gradient(135deg, #6366f1, #06b6d4);
-      color: white;
-      text-align: center;
+    :root {
+      --primary: #6366f1;
+      --secondary: #06b6d4;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 32px;
-      background: white;
-      color: #6366f1;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1rem;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Hiragino Sans', 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white; text-align: center; padding: 56px 24px 48px;
     }
+    header h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 800; }
+    header p { margin-top: 10px; opacity: 0.9; font-size: 1rem; max-width: 600px; margin-inline: auto; }
+
+    .cta {
+      display: inline-block; margin-top: 24px; padding: 14px 36px;
+      background: white; color: var(--primary); border-radius: 50px;
+      text-decoration: none; font-weight: 700; font-size: 1.05rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    main { max-width: 860px; margin: 0 auto; padding: 48px 16px 80px; }
+
+    h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 3px solid var(--primary); }
+    h3 { font-size: 1.1rem; font-weight: 700; margin: 24px 0 8px; color: var(--primary); }
+
+    .section { margin-bottom: 56px; }
+
+    p { margin-bottom: 14px; font-size: 0.97rem; }
+
+    .tools-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; margin-top: 24px;
+    }
+    .tool-card {
+      background: var(--card); border-radius: 14px; padding: 24px;
+      box-shadow: 0 2px 16px rgba(99,102,241,0.08); text-decoration: none; color: var(--text);
+      transition: transform 0.2s, box-shadow 0.2s; border: 2px solid var(--border);
+    }
+    .tool-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(99,102,241,0.15); border-color: var(--primary); }
+    .tool-icon { font-size: 2rem; margin-bottom: 10px; }
+    .tool-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .tool-desc { font-size: 0.85rem; color: var(--muted); }
+
+    .faq-item { margin-bottom: 20px; background: var(--card); border-radius: 12px; padding: 20px 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.04); }
+    .faq-q { font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+    .faq-a { font-size: 0.95rem; color: var(--muted); }
+
+    .about-box { background: var(--card); border-radius: 14px; padding: 32px; box-shadow: 0 2px 16px rgba(99,102,241,0.08); }
+
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 16px 0; }
+    th, td { padding: 12px 16px; border-bottom: 1px solid var(--border); text-align: left; }
+    th { background: #f0f4ff; font-weight: 700; color: var(--primary); }
+    tr:last-child td { border-bottom: none; }
+
+    footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--muted); }
   </style>
 </head>
 <body>
-  <div>
-    <h1>⚡ 便利ツール集</h1>
-    <p>日常で使える計算ツールをまとめました</p>
-    <a href="/cloud/tools-site/">ツールを使う →</a>
-  </div>
+
+<header>
+  <h1>⚡ 無料計算ツール集</h1>
+  <p>年齢・BMI・住宅ローン・割り勘・文字数・消費税など、日常で使える計算ツールをまとめました。会員登録不要・完全無料でご利用いただけます。</p>
+  <a href="/cloud/tools-site/" class="cta">ツールを使う →</a>
+</header>
+
+<main>
+
+  <!-- ツール一覧 -->
+  <section class="section">
+    <h2>📋 ツール一覧</h2>
+    <p>現在11種類の計算ツールを無料で提供しています。スマートフォン・タブレット・PCすべての端末でご利用いただけます。入力したデータはすべてお使いのブラウザ内で処理され、サーバーに送信されることは一切ありません。</p>
+    <div class="tools-grid">
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">🎂</div><div class="tool-name">年齢計算機</div><div class="tool-desc">生年月日から正確な年齢・生後日数を計算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">💪</div><div class="tool-name">BMI計算機</div><div class="tool-desc">身長・体重から肥満度と標準体重を計算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">🍻</div><div class="tool-name">割り勘計算機</div><div class="tool-desc">合計金額と人数から一人あたりの負担額を計算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">📝</div><div class="tool-name">文字数カウンター</div><div class="tool-desc">文字数・行数・バイト数をリアルタイム表示</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">⏳</div><div class="tool-name">カウントダウン</div><div class="tool-desc">目標日まで秒単位でリアルタイムカウント</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">🧾</div><div class="tool-name">消費税計算機</div><div class="tool-desc">税込・税抜・税額を瞬時に計算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">📊</div><div class="tool-name">パーセント計算機</div><div class="tool-desc">割引率・増減率・比率の計算に対応</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">🏠</div><div class="tool-name">住宅ローン計算機</div><div class="tool-desc">月々返済額・総返済額・利息合計を計算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">⏱️</div><div class="tool-name">時間計算機</div><div class="tool-desc">時刻の差・勤務時間・時間の足し算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">🔥</div><div class="tool-name">カロリー計算機</div><div class="tool-desc">基礎代謝・1日消費カロリーを計算</div></a>
+      <a href="/cloud/tools-site/" class="tool-card"><div class="tool-icon">💰</div><div class="tool-name">貯金シミュレーター</div><div class="tool-desc">複利計算で将来の貯蓄額をシミュレーション</div></a>
+    </div>
+  </section>
+
+  <!-- 各ツールの説明 -->
+  <section class="section">
+    <h2>🔍 各ツールの特徴と使い方</h2>
+
+    <h3>🎂 年齢計算機</h3>
+    <p>生年月日を入力するだけで、今日時点の正確な年齢を計算できます。「基準日」を変更することで、特定の日付時点での年齢も調べることができます。生後何日かも表示されるので、赤ちゃんの成長記録にも便利です。また、次の誕生日まであと何日かも表示します。</p>
+    <p>年齢計算では「数え年」ではなく「満年齢」で計算します。日本の法律上は誕生日の前日に1歳加算されますが、一般的な計算方法（誕生日当日に加算）で表示しています。</p>
+
+    <h3>💪 BMI計算機</h3>
+    <p>BMI（Body Mass Index）は、身長と体重から肥満度を表す国際的な指標です。計算式は「体重(kg) ÷ 身長(m)²」で求められます。WHOの基準では18.5未満が低体重、18.5〜25未満が普通体重、25以上が過体重とされています。</p>
+    <p>標準体重はBMI22を基準に計算します。BMI22が最も病気になりにくいとされているためです。ただしBMIは筋肉量を考慮しないため、スポーツ選手など筋肉量が多い方は高めに出ることがあります。</p>
+
+    <h3>🏠 住宅ローン計算機</h3>
+    <p>マイホーム購入を検討する際に欠かせない住宅ローンの試算ができます。借入金額・年利・返済期間を入力するだけで、毎月の返済額・総返済額・利息合計を瞬時に計算します。</p>
+    <p>返済方式は「元利均等返済」と「元金均等返済」に対応しています。元利均等返済は毎月の返済額が一定で家計管理がしやすく、元金均等返済は総返済額が少なくなるメリットがあります。</p>
+
+    <h3>📊 パーセント計算機</h3>
+    <p>「1000円の8%はいくら？」「セールで30%オフになったら？」「先月比で何%増えた？」など、日常のさまざまなパーセント計算に対応しています。消費税の計算や給与の増減率の確認など、幅広い用途でご活用いただけます。</p>
+
+    <h3>💰 貯金シミュレーター</h3>
+    <p>毎月コツコツ積み立てると将来いくらになるかを複利で計算します。例えば毎月3万円を年利0.1%で10年間積み立てると約360万円、年利3%なら約420万円になります。早いうちから始めるほど複利効果が大きくなるため、将来設計の参考にご活用ください。</p>
+  </section>
+
+  <!-- よくある質問 -->
+  <section class="section">
+    <h2>❓ よくある質問</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q. 利用料金はかかりますか？</div>
+      <div class="faq-a">すべてのツールは完全無料でご利用いただけます。会員登録やログインも不要です。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 入力したデータはどこかに保存されますか？</div>
+      <div class="faq-a">入力したデータはすべてお使いのブラウザ上のみで処理されます。サーバーへの送信・保存は一切行いません。安心してご利用ください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. スマートフォンでも使えますか？</div>
+      <div class="faq-a">はい、すべてのツールはスマートフォン・タブレット・PCに対応したレスポンシブデザインです。どの端末からでも快適にご利用いただけます。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 計算結果は正確ですか？</div>
+      <div class="faq-a">各ツールは一般的な計算式に基づいて実装していますが、医療・法律・金融など重要な判断に使用する場合は、専門家にご相談ください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q. 新しいツールのリクエストはできますか？</div>
+      <div class="faq-a">随時ツールを追加・改善しています。「こんなツールが欲しい」というご要望があればお気軽にお知らせください。</div>
+    </div>
+  </section>
+
+  <!-- サイトについて -->
+  <section class="section">
+    <h2>ℹ️ このサイトについて</h2>
+    <div class="about-box">
+      <p>このサイトは、日常生活でよく使う計算をすぐにできるように作られた無料ツール集です。「電卓を出すほどでもないけど暗算では難しい」という場面でサッと使えることを目指しています。</p>
+      <p>年齢計算・BMI・住宅ローン・割り勘・文字数カウント・消費税・パーセント計算・時間計算・カロリー計算・貯金シミュレーターなど、現在11種類のツールを提供しています。今後も随時ツールを追加していく予定です。</p>
+      <p>すべてのツールはHTML・CSS・JavaScriptのみで実装されており、外部サーバーへのデータ送信は行いません。インターネット接続さえあれば、ブラウザだけで動作します。</p>
+      <table>
+        <tr><th>項目</th><th>内容</th></tr>
+        <tr><td>サービス名</td><td>無料計算ツール集</td></tr>
+        <tr><td>提供ツール数</td><td>11種類（随時追加中）</td></tr>
+        <tr><td>利用料金</td><td>完全無料</td></tr>
+        <tr><td>動作環境</td><td>Chrome / Safari / Firefox / Edge（最新版推奨）</td></tr>
+        <tr><td>対応デバイス</td><td>PC / スマートフォン / タブレット</td></tr>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2024 無料計算ツール集 ／
+  <a href="/cloud/tools-site/">ツールを使う</a> ／
+  <a href="/cloud/tools-site/privacy.html">プライバシーポリシー</a>
+</footer>
+
 </body>
 </html>
